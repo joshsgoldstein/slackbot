@@ -23,6 +23,7 @@ def scheduleme():
     # This regular expression unwraps the single quotes and puts all strings into an array with
     # the format: ["title", "start", "end"]
     text_array = re.findall(r'"(.*?)"', raw_text)
+    print(text_array)
     if len(text_array) != 3:
         return 'The format is /scheduleme "[title]" "[start date & time]" "[end date & time]"'
 
